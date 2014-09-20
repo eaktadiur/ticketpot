@@ -1,0 +1,130 @@
+<% if(isAuthenticated) { %>
+	<% include ../layout/authheader %>
+<% } else { %>
+	<% include ../layout/header %>
+<% } %>
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">偏爱</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+          
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">性别</label>
+			        <select name="select-choice-1" id="sex">
+			            <option value="female">女性</option>
+			            <option value="male">男性</option>
+			        </select>
+                </div>
+                <div class="form-group">
+                    <label for="slider">持续时间（天）</label>
+                    <input type="text" name="slider" id="slider" value="1" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="1" class="form-control span2 slider" />
+                </div>
+
+
+
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">明星选择</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+          
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="../img/music/music_1.jpg" alt="Picture">
+                    <div class="caption">
+                        <h3 class='text-center'>PSY</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="../img/superjunior.jpg" alt="Picture">
+                    <div class="caption">
+                        <h3 class='text-center'>Super junior</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="../img/gdragon.jpg" alt="Picture">
+                    <div class="caption">
+                        <h3 class='text-center'>G-dragon</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="">
+                    <img src="../img/exo.jpg" alt="Picture">
+                    <div class="caption">
+                        <h3 class='text-center'>EXO</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="box-footer">
+        <a class='btn btn-primary' href="/book/book1" >推荐</a>
+        </div>
+    </form>
+</div>
+
+
+<script>
+        
+            sessionStorage.age = "all";
+            sessionStorage.duration = "short";
+            sessionStorage.sex = $('#sex').val();
+            $('#duration').change(function () {
+                var d = parseInt($('#duration').val());
+                var duration = "short";
+                if (d > 5) duration = "long";
+                sessionStorage.duration = duration;
+            });
+
+            $('#sex').change(function () {
+                sessionStorage.sex = $('#sex').val();
+            });
+            $('.age').click(function () {
+                sessionStorage.age = $(this).attr('age');
+            });
+
+        
+    </script>
+    
+
+
+
+<% include ../layout/footer %>

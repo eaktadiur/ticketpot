@@ -1,0 +1,55 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">병원 치료과목 소개</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/salemedi/salemedi1_1">
+                    <img src="" alt="">
+                    <div class="caption">
+                        <h3 class='text-center'>眼鼻整形</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/salemedi/salemedi1_2">
+                    <img src="" alt="">
+                    <div class="caption">
+                        <h3 class='text-center'>胸部整形</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/salemedi/salemedi1_3">
+                    <img src="" alt="">
+                    <div class="caption">
+                        <h3 class='text-center'>脸型整形</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+
+<% include ../layout/footer %>

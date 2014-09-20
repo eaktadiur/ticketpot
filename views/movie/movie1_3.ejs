@@ -1,0 +1,61 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/starshine.jpg" alt="starshine">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+                    	晨静园艺树木园 ‘五色星光园艺’<br />
+		                日期： 2013年12月6日~2014年3月16日（星期日）<br />
+		                亮灯时间：日莫时~21点/每周星期六日莫时~23点<br />
+		                （12月24日，25日，31日 日莫时至21点亮灯）<br />
+
+		                *因为气象的变化，亮灯会被取消<br />
+
+		                享受五色星光园艺100倍指南<br />
+		                为保持温暖，带手套，围巾和被毯。<br />
+		                用三角架的话，您能照更鲜明的相片。<br />
+		                如果平时来树木园的话，可以悠闲地观赏<br />
+		                周末会堵车，请访问在下午4点之前或者下午8点以后。<br />
+		                勿触灯泡，要不然会触电。<br />
+		                勿进花坛内部，里面植物在成长。<br />
+		                小心滑地，是因为于结冰。
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>위치찾기A</a>	    
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                                             
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/starshinedetail.gif" alt="starshinedetail">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	   
+                                                             
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+<script>sessionStorage.gpsName = "原真整形外科";</script>
+<% include ../layout/rating %>
+<% include ../layout/footer %>

@@ -1,0 +1,99 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/cellphone/bestrent_85.jpg" alt="seoulsnowfestival">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+                    	행사의 특징은 ----로써 ----를 가지고 ---
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">결제방법</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>총구매 가격</h3>
+                <div class='text-center'><span id="price">$ 000</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">주소</label>
+                    <input type="text" name="name" id="name" class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="name">전화번호</label>
+                    <input type="phone" name="phone" id="phone" class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="slider">수량</label>
+                    <input type="text" name="slider" id="slider" value="1" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="1" class="form-control span2 slider" />
+                </div>
+
+                <fieldset>
+                    <legend>참고사항</legend>
+                    dd
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">방문방법</label>
+                    <select name="select-choice-1" id="select-choice-1" class='form-control'>
+                        <option value="standard">Standard: 7 day</option>
+                        <option value="rush">Rush: 3 days</option>
+                        <option value="express">Express: next day</option>
+                        <option value="overnight">Overnight</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">행사선택</label>
+                    <select name="select-choice-1" id="select-choice-1" class='form-control'>
+                        <option value="standard">----</option>
+                        <option value="rush">KT USIM</option>
+                        <option value="overnight">None</option>
+                    </select>
+                </div>
+
+                <div class="form-group"> 
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" data-role="controlgroup" data-mini="true" data-type="horizontal" />
+                            <label for="checkbox-1">Escourt Service($100) - One time</label>
+                </div>
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+            <a href='#page1' class='btn btn-primary'>구매</a>
+            <a href='#page1' class='btn btn-primary'>담기</a>
+            <a href='/music' class='btn btn-primary'>돌아가기</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+
+<script>sessionStorage.gpsName = "原真整形外科";PriceCalc.init();</script>
+
+<% include ../layout/rating %>
+<% include ../layout/footer %>

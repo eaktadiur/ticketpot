@@ -1,0 +1,65 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../../img/jarasum.png" alt="jarasum">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p>
+                    	庆典简介 邀请大家来观光修养城市而自然生态系的宝库加平郡<br />
+		                现在要开场第五届甲鱼岛！留个浪漫新奇的回忆吧<br />
+		                庆典名： 第五届甲鱼岛星星冬天庆典<br />
+		                庆典期间： 2014.1.3~1.26<br />
+		                开场地域：京畿道加平郡加平川一带<br />
+		                节目内容：冰钓，雪橇，表演及体验活动<br />
+		                甲鱼岛的冰凌小说<br />
+		                鳖主簿传。(朝鲜后期的古典小说)<br />
+		                很久以前在加平川的最深处，有一位龙王。<br />
+		                因为他拥有如意珠，所以他会一直健康。<br />
+		                有一天，龙王的如意珠被偷了。<br />
+		                这里只有一个头绪，就是鳟鱼的鳞片！<br />
+		                龙王叫甲鱼找如意珠。<br />
+		                果然甲鱼能找鳟鱼吗？<br />
+		                甲鱼需要大家的帮忙~！<br />
+		                剧中人物<br />
+		                鳟鱼： 偷如意珠的大盗<br />
+		                甲鱼：要找如意珠的龙王的膀臂<br />
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>위치찾기A</a>	   
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                                              
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/jarasum_detail1.jpg" alt="jarasum_detail1">
+                <img src="../img/jarasum_detail2.jpg" alt="jarasum_detail2">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	   
+                    <div class="stars starrr pull-right" data-rating="0"></div>                                              
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+<script>sessionStorage.gpsName = "Jarasum";</script>
+<% include ../layout/rating %>
+
+<% include ../layout/footer %>

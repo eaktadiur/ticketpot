@@ -1,0 +1,94 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/cellphone/bestrent_85.jpg" alt="bestrent_85">
+                <div class="caption">
+                    <h3 class='text-center'>功能手机</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/cellphone_price.jpg" alt="cellphone_price">
+                <div class="caption">
+                    <h3 class='text-center'>功能手机</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <p class="box-title">결제방법</p>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form action='' method='POST'>
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>Total price</h3>
+                <div class='text-center'><span id="price">46.5 USD</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="name">这样</label>
+                    <input type="phone" name="phone" id="phone" value="" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="slider">长短</label>
+                    <input type="text" name="slider" id="days" value="0" min="0" max="365" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                	<label for="slider">数量</label>
+                    <input type="text" name="slider" id="slider" value="1" min="1" max="100" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                	<label for="select-choice-1" class="select">选择送货方式：</label>
+                    <select name="select-choice-1" id="select-choice-1" class='form-control'>
+                        <option value="standard">标准：7天</option>
+                    </select>
+                </div>  
+
+                <div class="form-group">
+                	<label for="select-choice-2" class="select">USIM 选择</label>
+                    <select name="select-choice-2" id="select-choice-2" class='form-control'>
+                        <option value="0">None</option>
+                        <option value="3">SK USIM + 3 USD</option>
+                    </select>
+                </div>  
+
+
+                
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+        <a id='paypal' href='/order?amount=46.5&desc=mvno1&qty=1' class="btn btn-primary">구매</a>
+        <a id='wishlist' href='/wishList?amount=46.5&desc=mvno1' class="btn btn-primary">담기</a>
+        <a href='/music' class="btn btn-primary">돌아가기</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+<% include ../layout/rating %>
+<% include ../layout/footer %>

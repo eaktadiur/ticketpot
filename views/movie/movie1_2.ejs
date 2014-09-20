@@ -1,0 +1,51 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hanok.jpg" alt="hanok">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+                    	南山谷韩屋村特别计划活动 2013年 冰花庆典<br/>
+						寒冷的冬天！在南山谷韩屋村留个美好的回忆吧<br/>
+						2013年12月22日（星期日）~2014年1月20日（星期一）<br/>
+						南山谷韩屋村天牛角广场
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>위치찾기A</a>	     
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                                            
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hanok_detail1.jpg" alt="hanok_detail1">
+                <img src="../img/hanok_detail2.jpg" alt="hanok_detail2">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	   
+                                                             
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+<script>sessionStorage.gpsName = "南山韩屋村南山韩屋村";</script>
+
+<% include ../layout/rating %>
+<% include ../layout/footer %>

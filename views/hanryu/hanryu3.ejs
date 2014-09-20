@@ -1,0 +1,116 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">명동 명소</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                    <img src="../img/myeongdong/trainstation.jpg" alt="trainstation">
+                    <div class="caption">
+                    <h3 class='text-center'>文化站首尔284（首尔历史）</h3>
+                    <p> 
+                        介绍</br>
+                        文化站首尔284前身为旧首尔火车站，最早建于1925年，是一栋文艺复兴式车站。随着时代的变迁、</br>
+                        城市的发展和人口的迅速增长，在首尔的南部和西部新建了火车站，而旧首尔火车站便渐渐退出了历史的舞台。</br>
+                        直到2011年，首尔征服开始着手修复旧首尔火车站，在国内公开征集新名称，最终选定名称——“文化站首尔284”，</br>
+                        这个名字包含了文化网络中心、首尔的地域性以及第284号史迹等含义。现在的文化站首尔284最大限度的保留了当年旧首尔站的样貌，</br>
+                        可以看到复原后的中央厅、候车大厅、VIP贵宾室、旧首尔站遗物的复原展示厅等。</br>
+                        开放时间</br>
+                        4月至9月：11:00-20:00(周末11:00-21:00)，</br>10月-3月：11:00-19:00(周末11:00-20:00)，</br>闭馆前1小时开始禁止入场，每周一、1月1日和春节休息。</br>
+                    </p>
+                    <a herf="" classs='btn btn-primary'>문화역사 서울 284 찾아가기</a>
+                    </div>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/myeongdong/nanta.jpg" alt="nanta">
+                <div class="caption">
+                    <h3 class='text-center'>乱打专用管（明洞）</h3>
+                    <p>
+                        目前乱打演出主要在首尔的明洞剧场、忠正路剧场以及济州岛剧场举行。</br>明洞剧场于2009年10月开馆，共两层，390个席位，是规模最大的乱打专用剧场。</br>
+                        从地铁2号线乙支路入口站出来步行5分钟；从4号线明洞站出来步行7分钟就到了，</br>在游览明洞的空档就能顺便去剧场，对游客来说是一个不错的选择哦。</br>
+                    </p>
+                    <a herf="" classs='btn btn-primary'>난타전용관 찾아가기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/myeongdong/informationcenter.jpg" alt="informationcenter">
+                <div class="caption">
+                    <h3 class='text-center'>明洞观光情报中心</h3>
+                    <p>
+                        明洞观光情报中心与11月最后一天开始投入运营，中文名称定为明洞旅游信息中心。</br>“明洞旅游信息中心”是首尔市、韩国外换银行与首尔观光营销株式会社一起参与的官民合作项目。</br>
+                        韩国外换银行将总部大楼1层的部分空间免费出租10年，规模为338㎡，</br>由首尔市政府来承担经营费用，由首尔观光营销株式会社负责经营。</br>
+                        旅游投诉处理及传统文化体验活动（如试穿韩国传统服装）等一系列服务。</br>
+                    </p>
+                    <a herf="" classs='btn btn-primary'>명동 관광 정보센터 찾아가기</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <p class="box-title">付款</p>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form action='' method='POST'>
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>总购买价</h3>
+                <div class='text-center'><span id="price">00.00 USD</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value=""  class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="name">电话号码</label>
+                    <input type="phone" name="phone" id="phone" value=""  class="form-control" />
+                </div>
+                
+
+                <fieldset>
+                    <legend>另请参阅</legend>
+                    ddd
+                </fieldset>
+
+                
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+        <a href='#page1' class="btn btn-primary">采购</a>
+        <a href='#page1' class="btn btn-primary">添加到购物车</a>
+        <a href='/music' class="btn btn-primary">返回</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+
+
+
+<% include ../layout/footer %>

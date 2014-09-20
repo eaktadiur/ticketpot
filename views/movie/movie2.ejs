@@ -1,0 +1,14 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<script>
+        
+	sessionStorage.gpsName = "原真整形外科";
+
+</script>
+
+<% include ../layout/rating %>
+<% include ../layout/footer %>

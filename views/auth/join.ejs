@@ -1,0 +1,36 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="box form-box" id="login-box">
+    <div class="header">Sign In</div>
+    <form action="/auth/postsignin" method="post">
+        <div class="body bg-gray">
+            <div class="form-group">
+                <input type="text" name="username" required focus class="form-control" placeholder="Email"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" required class="form-control" placeholder="Password"/>
+            </div>          
+        </div>
+        <div class="footer">                                                               
+            <button type="submit" class="btn bg-light-blue btn-block">Sign In</button>  
+
+            <p><a href="#">I forgot my password</a></p>
+
+            <a href="/auth/signup" class="text-center">Register a new membership</a>
+        </div>
+    </form>
+</div>
+    <div class="margin text-center">
+        <span>Sign in using social networks</span>
+        <br/>
+        <a href='/auth/fb' class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></a>
+        <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+        <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+
+    </div>
+<% include ../layout/footer %>

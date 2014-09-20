@@ -1,0 +1,170 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<div class='row-fluid'>
+    <div class="well">
+        <div id="map-canvas" style="width:100%;height:450px;"></div>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+    <script>
+
+        var map;
+
+        function initialize() {
+            var mapOptions = {
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+            // Try HTML5 geolocation
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    
+                    var point = geolib.findNearest(position.coords, window.nearest, 1);
+                    //var point = geolib.findNearest({latitude: 37.436396, longitude: 127.014086}, window.nearest, 1);
+                    var key = point.key == null ? 0 : point.key;
+                    console.log(map);
+                    if (!window.nearest) window.nearest = position.coords;
+                    var pos = new google.maps.LatLng(point.latitude,
+                                                 point.longitude);
+
+                    var infowindow = new google.maps.InfoWindow({
+                        map: map,
+                        position: pos,
+                        content: window.gps[key].name + ',' + window.gps[key].des + ',<br>distance : ' + geolib.convertUnit('km', point.distance , 2) + ' km'
+                    });
+                    console.log(point.distance);
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: map
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function () {
+                        window.location.href = window.location.origin + window.gps[key].url;
+                    })
+
+                    infowindow.open(map, marker);
+
+                    map.setCenter(pos);
+
+                }, function () {
+                    handleNoGeolocation(true);
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleNoGeolocation(false);
+            }
+        }
+
+        function setMark() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = new google.maps.LatLng(position.coords.latitude,
+                                                     position.coords.longitude);
+
+                    var infowindow = new google.maps.InfoWindow({
+                        map: map,
+                        position: pos,
+                        content: 'Location found using HTML5.'
+                    });
+
+                    map.setCenter(pos);
+                }, function () {
+                    handleNoGeolocation(true);
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleNoGeolocation(false);
+            }
+        }
+
+        // 留덊겕 ��젣�섍린
+        function removeMark() {
+            globalMarker.setOptions({
+                map: null,
+                visible: false
+            });
+            globalMarker = null;
+        }
+
+        function setInfoMark() {
+            //var html = "<div><a href='http://www.findall.co.kr' target='_blank'>www.findall.co.kr</a></div>";
+            //var html = "<div><iframe src='http://www.findall.co.kr' style='width:300px;height:120px;'></iframe></div>";
+
+            var html = "";
+            html += "<div>";
+            html += "    <a href='http://www.findall.co.kr' target='_blank'>";
+            html += "        <img src='http://image.findall.co.kr/FANew/Topmain/summer_logo.gif' border='0'>";
+            html += "    </a>";
+            html += "</div>";
+
+            var infoWin = new google.maps.InfoWindow({ content: html, maxWidth: 1000 });
+            var loc = new google.maps.LatLng(37.500061375296184, 127.03099206089973);
+
+            var myOptions = {
+                position: loc,
+                draggable: false,
+                map: globalMap,
+                //icon: "http://sstatic.naver.net/search/img2/ico_bal_a.gif", // �꾩씠肄��ㅼ젙����
+                visible: true
+            };
+
+            // 留덉빱 �앹꽦
+            globalMarker = new google.maps.Marker(myOptions);
+
+            // 留덉빱���대깽�몃━�ㅻ꼫 異붽�
+            google.maps.event.addListener(globalMarker, 'click', function () {
+                infoWin.open(globalMap, globalMarker);
+            });
+
+            // 吏�룄 以묒떖醫뚰몴 �대룞
+            globalMap.setCenter(loc);
+        }
+
+        function handleNoGeolocation(errorFlag) {
+            if (errorFlag) {
+                var content = 'Error: The Geolocation service failed.';
+            } else {
+                var content = 'Error: Your browser doesn\'t support geolocation.';
+            }
+
+            var options = {
+                map: map,
+                position: new google.maps.LatLng(60, 105),
+                content: content
+            };
+
+            var infowindow = new google.maps.InfoWindow(options);
+            map.setCenter(options.position);
+        }
+
+       
+        $.getJSON("/gpsbysex/" + sessionStorage.sex + "/" + sessionStorage.duration + "/" + sessionStorage.age, function (data) {
+            data = JSON.parse(data)
+            console.log(data);
+            if (data) {
+                var gpsArray = [];
+                $.each(data, function (key, val) {
+                    console.log(val);
+                    gpsArray.push({ "latitude": parseFloat(val.cor.split(",")[0]), "longitude": parseFloat(val.cor.split(",")[1]) });
+                });
+                window.gps = data;
+                window.nearest = JSON.parse(JSON.stringify(gpsArray));
+                initialize();
+            }
+        });
+
+
+
+    </script>
+
+    
+<% include ../layout/footer %>

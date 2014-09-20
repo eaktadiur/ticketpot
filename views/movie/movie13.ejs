@@ -1,0 +1,248 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/comein.jpg" alt="picture">
+                <div class="caption">
+                    <h3 class='text-center'>병원소개</h3>
+                    <p>
+                    	현재 이 병원은 언제 ㅌㅌㅌㅌ설립되어 진행되고 있으며 이와 관련한
+                    </p>
+                    <a href="#" class='btn btn-primary'>구매하기 </a>
+            		<a href="/customer/gpsRoute"  class='btn btn-primary'>위치찾기A </a>
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                         
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail1.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail2.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail3.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail4.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail5.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail6.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail7.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail8.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail9.jpg" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/komi/komi_detail10.jpg" alt="Picture">
+            </div>
+        </div>
+        
+        
+
+    </div>    
+</div>
+
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">付款</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>总购买价</h3>
+                <div class='text-center'><span id="price">$ 4000</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value="" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="name">电话号码</label>
+                    <input type="phone" name="phone" id="phone" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="slider">数量</label>
+                    <input type="text" name="slider" id="slider" value="1" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="1" class="form-control span2 slider" />
+                </div>
+
+                <fieldset>
+                    <legend>另请参阅</legend>
+                    모든 서비스 상담 후 구매 하시기 바랍니다. 최고가격으로 Deposit 결제 후 구매 여부에 따라 다시 금액을 환불해 드립니다.
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">样的手术</label>
+                        <select name="select-choice-2" id="select-choice-2" class='form-control'>
+                            <optgroup label="眼部">
+                                <option value="4000">眼睛修复手术 (3,850 ~ 5,500 USD)</option>
+                                <option value="2000">埋线法 (1,100 ~ 2,860 USD )</option>
+                                <option value="2000">切开法(1,650 ~ 3,300 USD )</option>
+                                <option value="2500">部分切开法(1,320 ~ 2,970 USD )</option>
+                                <option value="2000">内眼睑开大术（内眦赘皮） (1,100 ~ 2,860 USD)</option>
+                                <option value="2000">外眼睑开大术（开眼角）(1,100 ~ 2,860 USD)</option>
+                                <option value="2500">上睑下垂矫正术(1,650 ~ 3,300 USD)</option>
+                                <option value="2000">下睑下垂矫正术（眼袋）(1,650 ~ 3,300 USD)</option>
+                                <option value="2500">眉毛上提(1,650 ~ 3,300 USD)</option>
+                                <option value="2000">消除及重配眼下脂肪(1,650 ~ 3,300 USD )</option>
+                                <option value="4000">眼神矫正术(3,300 ~ 4,950 USD)</option>
+                            </optgroup>
+                            <optgroup label="鼻部">
+                                <option value="6000">鼻子修复手术(5,500 ~ 9,350 USD)</option>
+                                <option value="3500">隆鼻+鼻尖(2,750 ~ 6,050 USD)</option>
+                                <option value="4000">长鼻子缩短术(3,300 ~ 8,450 USD)</option>
+                                <option value="4500">箭头鼻(2,750 ~ 6,600 USD)</option>
+                                <option value="5000">鼻小柱延长(3,300 ~ 8,800 USD)</option>
+                                <option value="5000">朝天鼻(3,300 ~ 8,800 USD)</option>
+                                <option value="5000">甭鼻矫正术(4,400 ~ 8,250 USD)</option>
+                                <option value="5000">富鼻（隆起）(3,300 ~ 8,450 USD)</option>
+                                <option value="5000">鹰钩鼻子(3,300 ~ 5,500 USD)</option>
+                                <option value="2000">鼻翼缩小术(1,100 ~ 2,750 USD)</option>
+                                <option value="2500">鼻尖(1,980 ~ 4,180 USD)</option>
+                            </optgroup>
+                            <optgroup label="面部">
+                                <option value="6000">颧骨缩小术(5,500 ~ 8,800 USD)</option>
+                                <option value="13000">突嘴整形(11,000 ~ 18,700 USD)</option>
+                                <option value="6500">下颌角整形(5,500 ~ 8,800 USD)</option>
+                                <option value="13000">撅下吧整形(11,000 ~ 18,700 USD)</option>
+                                <option value="8000">长下巴(6,600 ~ 12,100 USD)</option>
+                                <option value="15000">长下巴+V线手术(11,000 ~ 20,900 USD)</option>
+                                <option value="8000">无下颌（切骨）(6,050 ~ 12,100 USD)</option>
+                                <option value="20000">颜面轮廓(16,500 ~ 26,400 USD)</option>
+                                <option value="10000">V-Line 改脸形(8,800 ~ 16,500 USD)</option>
+                                <option value="13000">颧骨缩小术+V-Line 改脸形(13,200 ~ 16,500 USD)</option>
+                            </optgroup>
+                            <optgroup label="胸部: 가슴">
+                                <option value="10000">隆胸修复术(8,800 ~ 13,200 USD)</option>
+                                <option value="8000">隆胸:(6,600 ~ 11,000 USD)</option>
+                                <option value="8000">脂肪移植隆胸(6,600 ~ 14,300 USD)</option>
+                                <option value="12000">胸部干细胞脂肪移植(7,700 ~ 19,800 USD)</option>
+                                <option value="12000">巨乳缩小(6,600 ~ 14,300 USD)</option>
+                            </optgroup>
+                            <optgroup label="胸部: 가슴">
+                                <option value="6000">乳房下垂矫正术(5,500 ~ 10,450 USD)</option>
+                                <option value="2500">乳头内陷矫正术(1,650 ~ 3,850 USD)</option>
+                                <option value="2500">乳头缩小术(1,320 ~ 3,850 USD)</option>
+                                <option value="5000">乳晕缩小术(2,750  ~ 11,000 USD)</option>
+                                <option value="3600">男性乳房发育症(1,650 ~ 6,600 USD)</option>
+                            </optgroup>
+                            <optgroup label="吸脂">
+
+                                <option value="2500">吸脂 : 面部[腮], 脖子(1,650 ~ 4,180 USD)</option>
+                                <option value="3000">吸脂 : 胳膊、腋窝(2,200 ~ 4,950 USD)</option>
+                                <option value="3000">吸脂 : 肋下、腰部(1,650 ~ 4,180 USD)</option>
+                                <option value="6000">吸脂 : 背(4,400 ~ 7,150 USD)</option>
+                                <option value="5000">吸脂 : 腹部(4,400 ~ 6,600 USD)</option>
+                                <option value="3400">吸脂 : 臀部(1,980 ~ 4,400 USD)</option>
+                                <option value="5200">吸脂 : 大腿 + 臀部下围(4,400 ~ 6,050 USD)</option>
+                                <option value="4000">吸脂 : 臀部下围(2,200 ~ 5,000 USD)</option>
+                                <option value="7800">吸脂 : 腹部整形(6,600 ~ 9,900 USD)</option>
+                                <option value="8000">吸脂 : （巧克力）腹肌整形(6,050 ~ 9,350 USD)</option>
+                                <option value="4000">吸脂 : 阻断神经瘦小腿(1,980 ~ 5,500 USD)</option>
+                            </optgroup>
+                            <optgroup label="脂肪和假体移植">
+                                <option value="1420">脂肪和假体移植 : 额头自体脂肪移植（首次）(1,100 ~ 2,750 USD)</option>
+                                <option value="600">脂肪和假体移植 : 额头自体脂肪移植（两次）(550 ~ 880 USD)</option>
+                                <option value="3200">脂肪和假体移植 : 额头假体移植(2,750 ~ 4,500 USD)</option>
+                                <option value="4000">脂肪和假体移植 : 无下颌(2,750 ~ 7,700)</option>
+                                <option value="5000">脂肪和假体移植 : 面部填充整形(2,750 ~ 6,600 USD)</option>
+                                <option value="8000">脂肪和假体移植 : 颧骨(4,400 ~ 11,000 USD)</option>
+                                <option value="7000">脂肪和假体移植 : 提升臀部（脂肪移植）(6,600 ~ 8,800 USD)</option>
+                                <option value="8000">脂肪和假体移植 : 提升臀部（假体移植）(6,600 ~ 11,000 USD)</option>
+                                <option value="3500">脂肪和假体移植: 面部整体自体脂肪移植(2,200 ~ 5,500 USD)</option>
+                                <option value="4500">脂肪和假体移植 : 脸脂肪移植 + 干细胞(1,000 ~ 5,500 USD)</option>
+                            </optgroup>
+                            <optgroup label="皱纹拉皮术">
+                                <option value="4500">皱纹拉皮术: Endotine皱纹拉皮术(3,300 ~ 6,600 USD)</option>
+                                <option value="6000">皱纹拉皮术 : 额头内窥镜(4,400 ~ 7,700 USD)</option>
+                                <option value="12000">皱纹拉皮术 : Face-Lift(4,400 ~ 20,900 USD)</option>
+                            </optgroup>
+                            <optgroup label="肉毒杆菌">
+                                <option value="300">肉毒杆菌 : 眼部(187 ~ 770 USD)</option>
+                                <option value="500">肉毒杆菌: 额头(220 ~ 880 USD)</option>
+                                <option value="500">肉毒杆菌 : 眉宇(187 ~ 770 USD)</option>
+                                <option value="300">肉毒杆菌: 鼻背（鼻脊）(165 ~ 715 USD)</option>
+                                <option value="600">肉毒杆菌 : 下颌角(319 ~ 1,100 USD)</option>
+                                <option value="1400">肉毒杆菌 : 小腿(1,100 ~ 3,300 USD)</option>
+                            </optgroup>
+                            <optgroup label="玻尿酸填充剂">
+                                <option value="2000">玻尿酸填充剂 : 填充整形（Restylane）(1,650 ~ 2,750 USD)</option>
+                                <option value="2200">玻尿酸填充剂 : 填充整形（Radiesse）(1,870 ~ 4,400 USD)</option>
+                            </optgroup>
+                            <optgroup label="妇科整形">
+                                <option value="2000">妇科整形 : 激光小阴唇切除术(1,650 ~ 3,300 USD)</option>
+                                <option value="4200">妇科整形 :阴道缩小(3,300 ~ 5,500 USD)</option>
+                            </optgroup>
+                            <optgroup label="其他">
+                                <option value="1400">酒窝整形 (880 ~ 2,200 USD)</option>
+                                <option value="3600">毛发移植(2,970 ~ 7,700 USD)</option>
+                                <option value="2500">嘴唇缩小(1,650 ~ 3,850 USD)</option>
+                            </optgroup>
+
+                        </select>
+                </div>
+
+
+                <div class="form-group"> 
+                    <input type="checkbox" name="checkbox-1" value="100" id="checkbox-1" class="custom" data-role="controlgroup" data-mini="true" data-type="horizontal" />
+                                <label for="checkbox-1" value="100">Escourt Service($100) - One time</label>
+                </div>
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+            <a id='paypal' href='/order?desc=surgery&qty=1&amount=4000' class='btn btn-primary'>采购</a>
+            <a id='wishlist' href='/wishList?desc=surgery&amount=4000' class='btn btn-primary'>添加到购物车</a>
+            <a href='/music' class='btn btn-primary'>返回</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+<script>sessionStorage.gpsName = "鼻美人整形外科";PriceCalc.init();</script>
+<% include ../layout/rating %>
+<% include ../layout/footer %>

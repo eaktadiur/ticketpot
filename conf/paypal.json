@@ -1,0 +1,10 @@
+{
+	"port" : 8080,
+	"api" : {
+		"host" : "api.sandbox.paypal.com",
+		"port" : "",
+		"client_id" : "AYQr-xBlXHe8Og-HkFj-qSpJ-wjR9NRa31We-nRR5RSz8uWn8DEx3ZASnel4",
+		"client_secret" : "EFWMmhCQsjO_1EGgZVxAFzCQ-m80cNrEJa-412Qv_e2XmaRYegeGc0elMLwL"
+	},
+	"mongo" : "localhost:27017/test"
+}

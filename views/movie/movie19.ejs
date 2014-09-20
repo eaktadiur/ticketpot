@@ -1,0 +1,253 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_logo.jpg" alt="picture">
+                <div class="caption">
+                    <h3 class='text-center'>병원소개</h3>
+                    <p>
+                    	현재 이 병원은 언제 ㅌㅌㅌㅌ설립되어 진행되고 있으며 이와 관련한
+                    </p>
+                    <a href="#" class='btn btn-primary'>구매하기 </a>
+            		<a href="/customer/gpsRoute"  class='btn btn-primary'>위치찾기A </a>
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                         
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail1.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail2.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail3.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail4.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail5.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail6.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail7.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail8.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail9.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail10.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail11.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail12.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail13.JPG" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hus-hu/hus-hu_detail14.JPG" alt="Picture">
+            </div>
+        </div>
+        
+
+    </div>    
+</div>
+
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">付款</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>总购买价</h3>
+                <div class='text-center'><span id="price">$ 4000</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value="" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="name">电话号码</label>
+                    <input type="phone" name="phone" id="phone" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="slider">数量</label>
+                    <input type="text" name="slider" id="slider" value="1" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="1" class="form-control span2 slider" />
+                </div>
+
+                <fieldset>
+                    <legend>另请参阅</legend>
+                    모든 서비스 상담 후 구매 하시기 바랍니다. 최고가격으로 Deposit 결제 후 구매 여부에 따라 다시 금액을 환불해 드립니다.<br><br>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">样的手术</label>
+                        <select name="select-choice-2" id="select-choice-2" class='form-control'>
+                            <optgroup label="种植牙">
+                                <option value="2800">外国产 (2800 USD)</option>
+                                <option value="1700">韩国产 (PFM/Zirconia)(1700 USD )</option>
+                            </optgroup>
+                            <optgroup label="植骨种植牙">
+                                <option value="700">植骨种植牙 （前牙，大牙）(700 USD)</option>
+                                <option value="1400">上颌窦底提升术(1400 USD)</option>
+                                <option value="800">种植牙（黄金嵌体）(800 USD)</option>
+                            </optgroup>
+                            <optgroup label="嵌体">
+                                <option value="800">黄金嵌体(800 USD)</option>
+                                <option value="600">PFM(600 USD)</option>
+                                <option value="900">PFG   (900 USD)</option>
+                                <option value="750">陶瓷(750 USD)</option>
+                                <option value="800">Zirconia(前牙/大牙)(800 USD)</option>
+                                <option value="2600">部分假牙，全假牙(2600 USD)</option>
+                                <option value="450">Resin/Gold Inlay(450 USD)</option>
+                                <option value="500">Resin/Gold Onlay(500 USD)</option>
+                            </optgroup>
+                            <optgroup label="柱">
+                                <option value="300">casting metal post(300 USD)</option>
+                                <option value="300">direct post(300 USD)</option>
+                                <option value="200">resin core(200 USD)</option>
+                            </optgroup>
+                            <optgroup label="牙周">
+                                <option value="150">불소도포(150 USD)</option>
+                                <option value="100">洗牙(100 USD)</option>
+                                <option value="400">牙齿修复(400 USD)</option>
+                            </optgroup>
+                            <optgroup label="补">
+
+                                <option value="200">牙龈磨耗(200 USD)</option>
+                                <option value="200">교합면(200 USD)</option>
+                                <option value="200">정중이개(200 USD)</option>
+                                <option value="200">修补(200 USD)</option>
+                            </optgroup>
+                            <optgroup label="美白">
+                                <option value="100">PRR (100 USD)</option>
+                                <option value="100">실활치 미백술 (100 USD)</option>
+                                <option value="700">zoom2美白 (700 USD)</option>
+                                <option value="600">冷光美白 (600 USD)</option>
+                                <option value="800">Gum Bleaching(1科) (800 USD)</option>
+                                <option value="200">美白修改 (200(6M以内) USD)</option>
+                                <option value="400">美白修改 (400(6M以内) USD)</option>
+                                <option value="400">在家美白(套1,美白药2) (400 USD)</option>
+                                <option value="100">美白药1个(本原pt 100 USD)</option>
+                                <option value="150">美白药1个(本原pt 150 USD)</option>
+                            </optgroup>
+                            <optgroup label="一般">
+                                <option value="200">pulpotomy(200  USD)</option>
+                                <option value="200">1cannal(200 USD)</option>
+                                <option value="350">2cannal(350 USD)</option>
+                                 <option value="500">3cannal(500 USD)</option>
+                                <option value="300">curretage(300 USD)</option>
+                                 <option value="350">apico(350 USD)</option>
+                                <option value="40"> 拔乳牙(40 USD)</option>
+                                 <option value="150">拔牙(150 USD)</option>
+                                <option value="200">难拔牙(200 USD)</option>
+                                 <option value="300">拔埋伏牙(300 USD)</option>
+                                <option value="20">商谈(20 USD)</option>
+                                 <option value="150">睡眠麻醉(150 USD)</option>
+                                <option value="800">下巴关节(800 USD)</option>
+                            </optgroup>
+                            <optgroup label="校正">
+                                <option value="10">校正详细诊断(300 USD)</option>
+                                <option value="420">金属(420 USD)</option>
+                                <option value="500">树脂(500 USD)</option>
+                                <option value="550">陶瓷(550 USD)</option>
+                                <option value="600">Clippy-c(600 USD)</option>
+                                <option value="900">舌侧矫正(900 USD)</option>
+                                <option value="800">舌侧combi (800 USD)</option>
+                                <option value="11000">Incognito(11000 USD)</option>
+                                <option value="300">Incognito br(300 USD)</option>
+                                <option value="1000">Incognito combi(1000 USD)</option>
+                                <option value="4000">透明(4000 USD)</option>
+                                <option value="6000">透明(6000 USD)</option>
+                                <option value="10000">Invisalign (10000 USD)</option>
+                                  <option value="1560">Upright(1560 USD)</option>
+                                <option value="100">Screw(个)）(100 USD)</option>
+                                  <option value="1500">TMJ(诊断/装置)(1,500 USD)</option>
+                                     <option value="600">Retainer(诊断/装置)(600/他齒科500 USD)</option>
+                                <option value="600">Retainer丢失再制作(600,上300/下300 USD)</option>
+                                     <option value="20">fixed Retainer掉(1棵牙20 USD)</option>
+                                <option value="1500">1次校正(1500 USD)</option>
+                                     <option value="30">拔牙(1棵 30 USD)</option>
+                                <option value="50,000">Wedding DBS(50,000 USD)</option>
+                                  <option value="#">Case Refinement(没有追加费用(包含Invisalign)</option>
+                            </optgroup>
+
+                        </select>
+                </div>
+
+                
+
+
+                <div class="form-group"> 
+                    <input type="checkbox" name="checkbox-1" value="100" id="checkbox-1" class="custom" data-role="controlgroup" data-mini="true" data-type="horizontal" />
+                                <label for="checkbox-1" value="100">Escourt Service($100) - One time</label>
+                </div>
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+            <a id='paypal' href='/order?desc=surgery&qty=1&amount=4000' class='btn btn-primary'>采购</a>
+            <a id='wishlist' href='/wishList?desc=surgery&amount=4000' class='btn btn-primary'>添加到购物车</a>
+            <a href='/music' class='btn btn-primary'>返回</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+<script>sessionStorage.gpsName = "Hus-hu整形牙科";PriceCalc.init();</script>
+<% include ../layout/rating %>
+<% include ../layout/footer %>

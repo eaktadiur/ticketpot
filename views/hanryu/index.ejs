@@ -1,0 +1,83 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">景点</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/hanryu/hanryu1">
+                    <img src="../img/entertainment.png" alt="entertainment">
+                    <div class="caption">
+                        <h3 class='text-center'>Entertainment</h3>
+                        <p>韩国 Entertainment(SM,YG.JYP)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/hanryu/hanryu2">
+                    <img src="../img/namsan.jpg" alt="bestrent_155">
+                    <div class="caption">
+                        <h3 class='text-center'>南山</h3>
+                        <p>南山首尔塔和南山步道</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/hanryu/hanryu3">
+                    <img src="../img/myeongdong.jpg" alt="myeongdong">
+                    <div class="caption">
+                        <h3 class='text-center'>明洞</h3>
+                        <p>明洞街在韩国的中心</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/hanryu/hanryu4">
+                    <img src="../img/kangnam.jpg" alt="kangnam">
+                    <div class="caption">
+                        <h3 class='text-center'>江南</h3>
+                        <p>在江南区狎鸥亭江南罗德奥街，绿树成荫的街道街式购物中心</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/hanryu/hanryu5">
+                    <img src="../img/hongdae.jpg" alt="kangnam">
+                    <div class="caption">
+                        <h3 class='text-center'>弘大</h3>
+                        <p>弘大街头青年和俱乐部</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<% include ../layout/footer %>

@@ -1,0 +1,26 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id ="blog" align="center">
+				<iframe  src="http://blog.koreadaily.com/media.asp?action=POST&med_usrid=koreakorea&pos_no=745308" width="1080" height="850">
+			</iframe>
+        </div>
+
+        <h3>참조 : 코리아 데일리 블로그 http://blog.koreadaily.com/media.asp?action=POST&med_usrid=koreakorea&pos_no=745308</h3>
+
+    
+    </div>    
+</div>
+
+
+<% include ../layout/footer %>

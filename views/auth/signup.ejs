@@ -1,0 +1,53 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="box form-box" id="login-box">
+    <div class="header">Sign up</div>
+    <form action="/auth/postsignup" method="post">
+        <div class="body bg-gray">
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Full name"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" class="form-control" required placeholder="Email"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" required class="form-control" placeholder="Password"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password2" required class="form-control" placeholder="Retype password"/>
+            </div>
+            <div class="form-group">
+                <input type="phone" name="phone" required class="form-control" placeholder="Phone number"/>
+            </div>
+            <div class="form-group">
+                <select name='userType' required class='selectpicker span2' data-width="100%" style="width:100%;height:32px;">
+                    <option value="-1">Select User Type</option>
+                    <option value="1">Customer</option>
+                    <option value="2">Merchant</option>
+                </select>
+            </div>
+        </div>
+        <div class="footer">                    
+
+            <button type="submit" class="btn bg-light-blue btn-block">Sign up</button>
+
+            <a href="/auth/join" class="text-center">I already have a membership</a>
+        </div>
+    </form>
+
+</div>
+
+<div class="margin text-center">
+        <span>Register using social networks</span>
+        <br/>
+        <a href='/auth/fb' class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></a>
+        <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+        <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+
+    </div>
+<% include ../layout/footer %>

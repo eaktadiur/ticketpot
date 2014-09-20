@@ -1,0 +1,52 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/salondesho.jpg" alt="salondesho">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+                    	首尔沙龙德朔克罗<br />
+		                从法国为起点的沙龙德朔克罗是在11个国家20个城市开会，<br />
+		                这具有20年历史的沙龙德朔克罗是个高档的巧克力专门庆典。<br />
+		                它不但合起来关于巧克力的所有制品及技术，而且沙龙德朔克罗成为国际文化产品。。
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>위치찾기A</a>	                        
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                         
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/chocola_detail1.jpg" alt="chocola_detail1">
+                <img src="../img/chocola_detail2.jpg" alt="chocola_detail2">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	
+                                                                   
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+<script>sessionStorage.gpsName = "龙山战争纪念馆";</script>
+
+<% include ../layout/rating %>
+
+<% include ../layout/footer %>

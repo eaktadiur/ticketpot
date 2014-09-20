@@ -1,0 +1,59 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">MVNO</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/rent/rent1">
+                    <img src="../img/cellphone/bestrent_85.jpg" alt="bestrent_85">
+                    <div class="caption">
+                        <h3 class='text-center'>经济</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/rent/rent2">
+                    <img src="../img/cellphone/bestrent_155.jpg" alt="bestrent_155">
+                    <div class="caption">
+                        <h3 class='text-center'>中</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/rent/rent3">
+                    <img src="../img/cellphone/bestrent_154.jpg" alt="bestrent_154">
+                    <div class="caption">
+                        <h3 class='text-center'>豪华</h3>
+                        <p></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+<% include ../layout/footer %>

@@ -1,0 +1,25 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id ="blog" align="center">
+				<iframe  src="http://blog.daum.net/decus/527" width="1080" height="850"></iframe>
+        </div>
+
+        <h3>참조 : 네이버 http://blog.daum.net/decus/527</h3>
+
+    
+    </div>    
+</div>
+
+
+<% include ../layout/footer %>

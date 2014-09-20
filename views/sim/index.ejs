@@ -1,0 +1,27 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">韩国 USIM</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <a href="/music/music2">
+                    <img src="../img/sk.jpg" alt="sk">
+                    <div class="caption">
+                        <h3 class='text-center'>SK USim</h3>
+                        <p>Sk 电信</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<% include ../layout/footer %>

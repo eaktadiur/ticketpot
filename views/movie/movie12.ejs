@@ -1,0 +1,161 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kunkook.jpg" alt="picture">
+                <div class="caption">
+                    <h3 class='text-center'>병원소개</h3>
+                    <p>
+                    	현재 이 병원은 언제 ㅌㅌㅌㅌ설립되어 진행되고 있으며 이와 관련한
+                    </p>
+                    <a href="#" class='btn btn-primary'>구매하기 </a>
+            		<a href="/customer/gpsRoute"  class='btn btn-primary'>위치찾기A </a>
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                         
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kun/kun_detail1.png" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kun/kun_detail2.png" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kun/kun_detail3.png" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kun/kun_detail4.png" alt="Picture">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/kun/kun_detail5.png" alt="Picture">
+            </div>
+        </div>
+        
+        
+        
+        
+
+    </div>    
+</div>
+
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <h2 class="box-title">付款</h2>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>总购买价</h3>
+                <div class='text-center'><span id="price">$ 650</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value="" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="name">电话号码</label>
+                    <input type="phone" name="phone" id="phone" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="slider">数量</label>
+                    <input type="text" name="slider" id="slider" value="1" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="1" class="form-control span2 slider" />
+                </div>
+
+                <fieldset>
+                    <legend>另请参阅</legend>
+                    모든 서비스 상담 후 구매 하시기 바랍니다. 최고가격으로 Deposit 결제 후 구매 여부에 따라 다시 금액을 환불해 드립니다.<br><br>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="select-choice-1" class="select">样的手术</label>
+                        <select name="select-choice-2" id="select-choice-2" class='form-control'>
+                            <optgroup label="全面健康护理">
+                            <option value="650">全面健康护理 (600 ~ 700 USD)</option>
+                            <option value="1900">全面健康护理 (1,830 ~ 2,040 USD)</option>
+                            <option value="2150">PET癌精密诊断(2,100 ~ 2,200 USD)</option>
+                            <option value="900">肺癌精密诊断(840 ~ 920 USD)</option>
+                            <option value="950">大肠癌精密诊断 (920 ~ 970 USD)</option>
+                            <option value="1000">心脏精密诊断(970 ~ 1030 USD)</option>
+                        </optgroup>
+                        <optgroup label="溢价">
+                            <option value="2950">溢价PET癌精密诊断(2,900 ~ 2,990 USD)</option>
+                            <option value="12500">溢价脑心脏精密诊断(3,000 ~ 32,500 USD)</option>
+                        </optgroup>
+                        <optgroup label="生命周期">
+                            <option value="500">儿童(480 ~ 520 USD)</option>
+                            <option value="520">青少年(500 ~ 540 USD)</option>
+                            <option value="800">准夫妇(660 ~ 970 USD)</option>
+                            <option value="2960">老年人(2,960 USD)</option>
+                        </optgroup>
+                        <optgroup label="特化/定制课程">
+                            <option value="298">眼科精密(298 USD)</option>
+                            <option value="97">眼科小儿青少年(97 USD)</option>
+                            <option value="69">眼睛处方(69 USD)</option>
+                            <option value="141">骨质疏松(141 USD)</option>
+                            <option value="307">过敏(307 USD)</option>
+                            <option value="130">成人压抑(130 USD)</option>
+                            <option value="650">青少年压抑(650 USD)</option>
+
+                        </optgroup>
+                        <optgroup label="遗传疾病套装检查">
+                            <option value="405">心血管疾病(405 USD)</option>
+                            <option value="1440">心脏长间隔综合征(1,440 USD)</option>
+                            <option value="none">代谢性疾病(미정: 상담필수)</option>
+                            <option value="845">甲状腺癌(845 USD)</option>
+                            <option value="2035">대장암(2,035 USD)</option>
+                            <option value="1335">乳房癌/软巢癌(1,335 USD)</option>
+                            <option value="485">6大癌(485 USD)</option>
+                            <option value="220">阿尔茨海默氏病(220 USD)</option>
+                        </optgroup>
+
+                        </select>
+                </div>
+
+                
+
+
+                <div class="form-group"> 
+                    <input type="checkbox" name="checkbox-1" value="100" id="checkbox-1" class="custom" data-role="controlgroup" data-mini="true" data-type="horizontal" />
+                                <label for="checkbox-1" value="100">Escourt Service($100) - One time</label>
+                </div>
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+            <a id='paypal' href='/order?desc=surgery&qty=1&amount=650' class='btn btn-primary'>采购</a>
+            <a id='wishlist' href='/wishList?desc=surgery&amount=650' class='btn btn-primary'>添加到购物车</a>
+            <a href='/music' class='btn btn-primary'>返回</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+<script>sessionStorage.gpsName = "建国大学医院";PriceCalc.init();</script>
+<% include ../layout/rating %>
+<% include ../layout/footer %>

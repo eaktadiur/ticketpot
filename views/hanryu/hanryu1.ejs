@@ -1,0 +1,105 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                    <img src="../img/sm.jpg" alt="sm">
+                    <div class="caption">
+                        <h3 class='text-center'>Sm Entertainment</h3>
+                        <p>
+                    주식회사 SM 엔터테인먼트는 가수 출신의 이수만이 설립한 연예기획사이다. </br>초기에는 연예 매니지먼트 사업을 주력으로 하였으나 현재는 자회사 신설, </br>계열사 편입등으로 사업영역을 지속적으로 확대하고 있다. </br>외국 현지법인으로 SM JAPAN, ASIA, USA가 있다.</br>
+                    </p>
+                    <a herf="" classs='btn btn-primary'>sm 찾아가기</a>
+                    </div>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                    <img src="../img/jyp.jpg" alt="jyp">
+                    <div class="caption">
+                        <h3 class='text-center'>JYP Entertainment</h3>
+                        <p>
+                            ㈜제이와이피엔터테인먼트는 대한민국의 종합 엔터테인먼트 회사이다.  </br>회사 이름은 창립자인 박진영의 영문 이름 이니셜을 따 지어졌다.  </br>전·현 소속 대표 연예인으로 진주, god, 비, 박지윤, 원더걸스, 2AM,  </br>2PM, miss A 등이 유명하다.  </br>본사는 서울특별시 강남구 청담동에 있다. </br> 연예인 신인 발굴, 연예인 매니지먼트,  </br>음반 기획 및 제작 분야에 진출해 있다 </br>
+                        </p>
+                        <a herf="" classs='btn btn-primary'>JYP 찾아가기</a>
+                    </div>
+            </div>
+        </div>
+    
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/yg.jpeg" alt="yg">
+                <div class="caption">
+                    <h3 class='text-center'>YG family</h3>
+                    <p>
+                        YG 엔터테인먼트 는 서태지와 아이들의 멤버였던 양현석이</br> 그룹 해체 후 창립한 연예 기획사이다. </br>음반 기획 및 제작 분야에 진출해있고 다양한 가수들을 배출하였다.</br> 가수 이외에도 여러 연기자를 배출하였으나 2005년 10월 양현석이</br> 가수와 음반 기획에만 전념하겠다고 밝혀 연기자 매니지먼트는 한동안 중단되기도 하였다. </br>그러나 2009년 초부터 연기자 매니지먼트를 본격적으로 </br>재개하여 종합 엔터테인먼트사로서 역량을 한층 강화하고 있다.</br>
+                    </p>
+                    <a herf="" classs='btn btn-primary'>YG Family 찾아가기</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="box box-primary">
+    <div class="box-header bg-primary">
+        <p class="box-title">付款</p>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <form action='' method='POST'>
+        <div class="box-body">
+            
+
+            <div class="box-header">
+                <h3 class='text-center'>总购买价</h3>
+                <div class='text-center'><span id="price">00.00 USD</span></div>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="name">地址</label>
+                    <input type="text" name="name" id="name" value=""  class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="name">电话号码</label>
+                    <input type="phone" name="phone" id="phone" value=""  class="form-control" />
+                </div>
+                
+
+                <fieldset>
+                    <legend>另请参阅</legend>
+                    ddd
+                </fieldset>
+
+                
+            </div><!-- /.box-body -->
+
+
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+        <a href='#page1' class="btn btn-primary">采购</a>
+        <a href='#page1' class="btn btn-primary">添加到购物车</a>
+        <a href='/music' class="btn btn-primary">返回</a>
+        </div>
+    </form>
+</div><!-- /.box -->
+
+
+
+<% include ../layout/footer %>

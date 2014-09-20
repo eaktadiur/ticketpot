@@ -1,0 +1,103 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+<script>
+        
+	sessionStorage.gpsName = "首尔动物园";
+
+</script>
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../../img/seoulzoo.jpg" alt="seoulzoo">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+						文化表演节目 跟读书专家一起读动物园的书
+						<br>
+						日期：12月21日~2月2日（每周星期六，星期天/圣诞节/新年/春节）
+						<br>
+						13:30~14:00 / 15:30~16:00
+						<br>
+						场地：植物园内的特设舞台
+						<br>
+						每周选定关于动物的书，拿着这些书跟读书专家一起谈话
+						<br>
+						首尔动物园选朴熙素为形象大使，和他一起听的音乐会
+						<br>
+						日期：12月21日~2月2日（每周星期六，星期天/圣诞节/新年/春节）
+						<br>
+						场地：植物园内的特设舞台
+						<br>
+						歌手朴熙素用首尔动物园动物的日常小事来做了作品集，在脱口音乐会他要给我们讲动物的日常小事
+						<br>
+						特别计划节目
+						<br>
+						<br>
+						跟家人，情人 和朋友一起度过的属马的2014年
+						<br>
+						日期：1月30日~2月1日
+						<br>
+						11:00~16:00
+						<br>
+						场地：动物园入口广场
+						<br>
+						迎接着属马年，为了给大家留个美好的回忆搞关于动物的活动如下：
+						<br>
+						盖动物形象的长子，做动物词典
+						<br>
+						动物园的迎新演剧
+						<br>
+						<br>
+						日期：1月30日~2月1日
+						<br>
+						11:00~16:00
+						<br>
+						场地：动物园入口广场
+						<br>
+						大家会一边玩着传统游戏，一边和动物园的动物迎着新年
+						<br>
+						写下新年愿望及家训
+						<br>
+						日期：1月31日~2月1日/11：00~16：00
+						<br>
+						场地：动物园入口广场
+						<br>
+						跟家人，情人 和动物一起度过的属马的2014年
+						<br>
+						书法专家会给参加者写个人各家的家训！ 这会给参加者留个美好的新年回忆
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>구매하기</a>
+					<div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>	                        
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../../img/seoulzoodetail.jpg" alt="seoulzoodetail">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	   
+					                   
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+
+
+<% include ../layout/rating %>
+<% include ../layout/footer %>

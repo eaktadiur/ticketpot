@@ -1,0 +1,66 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/lightstory.jpg" alt="lightstory">
+                <div class="caption">
+                    <h3 class='text-center'>행사소개</h3>
+                    <p>
+                    	香草岛灯光童话庆典 香草岛的灯光童话庆典至2014年4月30日无休息日地开场。<br />
+		                开场时间<br />
+		                ▶周日<br />
+		                ▶ 周一<br />
+		                ▶ 周二<br />
+		                ▶ 周三<br />
+		                ▶ 周四<br />
+		                ▶ 周五<br />
+		                ▶ 周六<br />
+		                亮灯时间<br />
+		                第五届 抱川小草岛<br />
+		                灯光童话庆典<br />
+		                *300米 粉红色愿望隧道<br />
+		                *3000平方 五色灯光山中园艺<br />
+		                *300个 圣诞老人造型 等<br />
+		                还有各种各样的圣诞照相地域<br />
+		                在灯光之下情侣会谈情说爱<br />
+		                跟朋友一起留个美好的回忆，跟家人感到幸福的时间，请大家来香草岛灯光童话庆典。<br />
+		                联络：070-4801-0351
+                    </p>
+					<a href='#' class='btn btn-primary'>구매하기</a>	                        
+					<a href='/customer/gpsRoute' class='btn btn-primary'>위치찾기A</a>	  
+                    <div id='ovarallrating' class="stars starrr pull-right" data-rating="0"></div>                                               
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="../img/hubisland.jpg" alt="hubisland">
+                <div class="caption">
+                    <h3 class='text-center'></h3>
+                    <p></p>
+					<a href='#page1' class='btn btn-primary'>구매</a>	                        
+					<a href='#page1' class='btn btn-primary'>담기</a>	                        
+					<a href='/music' class='btn btn-primary'>돌아가기</a>	
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
+<script>sessionStorage.gpsName = "香草岛童话节灯香草岛童话节灯";</script>
+
+<% include ../layout/rating %>
+
+<% include ../layout/footer %>

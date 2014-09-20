@@ -1,0 +1,57 @@
+<% if(isAuthenticated) { %>
+    <% include ../layout/authheader %>
+<% } else { %>
+    <% include ../layout/header %>
+<% } %>
+
+    <script>
+        // Put event listeners into place
+        var context;
+        window.addEventListener("DOMContentLoaded", function () {
+            // Grab elements, create settings, etc.
+            var canvas = document.getElementById("canvas"),
+                    context = canvas.getContext("2d"),
+                    video = document.getElementById("video"),
+                    videoObj = { "video": true },
+                    errBack = function (error) {
+                        console.log("Video capture error: ", error.code);
+                    };
+            console.log('hi 2' + context);
+            // Put video listeners into place
+            if (navigator.getUserMedia) { // Standard
+                navigator.getUserMedia(videoObj, function (stream) {
+                    video.src = stream;
+                    video.play();
+                }, errBack);
+            } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+                navigator.webkitGetUserMedia(videoObj, function (stream) {
+                    video.src = window.webkitURL.createObjectURL(stream);
+                    video.play();
+                }, errBack);
+            }
+
+            document.getElementById("snap").addEventListener("click", function () {
+                context.drawImage(video, 0, 0, 640, 480);
+                $('#albumImg').val(document.getElementById("canvas").toDataURL("image/jpg"));
+            });
+
+        }, false);
+
+    </script>
+
+    <div class="row-fluid" >
+    <div class="well">
+    <div class="row">
+    <video id="video" width="460" height="380" autoplay></video>
+    <button id="snap" class='btn btn-primary' >捕捉照片</button>
+    <canvas id="canvas" width="460" height="380"></canvas>
+    <br/>
+    <br/>
+    <form method="post" enctype="multipart/form-data" action="/postalbum" id="albumFrm" data-ajax="false">
+                <input type="hidden" name="albumImg" id="albumImg" value="albumImg" />
+                <input type="submit"  class='btn btn-primary' value="节省" />
+            </form>
+            </div>
+</div>
+</div>
+<% include ../layout/footer %>

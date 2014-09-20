@@ -1,0 +1,26 @@
+<% include ../layout/header %>
+
+<div class='row-fluid'>
+<div class="well col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <div class='control-group'>
+                <label class='control-label'>Quantity : </label>
+                <label id="qty"><%= qty %></label>
+            </div>
+            <div class='control-group'>
+                <label class='control-label'>Total : </label>
+                <label  id="total"><%= total %></label>
+            </div>
+            <div class='control-group'>
+                <label class='control-label'>Description : </label>
+                <label  id="desc"><%= desc %></label>
+            </div>
+
+
+            <a href="/paypal" class="btn btn-primary">Paypal</a>
+            <% if(hasCreditCard) { %>
+            	<a href="/creditcard" class="btn btn-primary">Credit Card</a>
+            <% } %>
+        </div>
+
+<% include ../layout/footer %>
